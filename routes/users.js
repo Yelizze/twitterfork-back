@@ -7,7 +7,7 @@ const { checkBody } = require("../modules/checkBody");
 const uid2 = require("uid2");
 const bcrypt = require("bcrypt");
 
-// Le premier utilisateur: firstname = elon, username = elon, et son mot de passe, c'est "elon"
+// Le premier utilisateur: irstname = elon, username = elon, et son mot de passe, c'est "elon"
 router.post("/signup", (req, res) => {
   if (!checkBody(req.body, ["firstname", "username", "password"])) {
     res.json({ result: false, error: "Missing or empty fields" });
